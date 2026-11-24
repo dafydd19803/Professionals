@@ -111,6 +111,8 @@ h2, h3, p { margin-top: 0; }
 .text-button { padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--white); color: var(--navy); cursor: pointer; font-size: 15px; font-weight: 600; line-height: 1.4; }
 .text-button:hover { border-color: var(--gold-deep); background: var(--surface-soft); }
 .clear-button { margin-bottom: 20px; white-space: nowrap; }
+.view-all-button { margin: 0 0 14px; }
+.view-all-button[hidden] { display: none; }
 .clear-button span { margin-left: 6px; color: var(--gold-deep); font-size: 16px; }
 .filters {
   display: grid;

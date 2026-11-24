@@ -70,6 +70,7 @@ const elements = {
   category: document.getElementById('category-filter'),
   stage: document.getElementById('stage-filter'),
   clear: document.getElementById('clear-filters'),
+  viewAll: document.getElementById('view-all-businesses'),
   count: document.getElementById('results-count'),
   grid: document.getElementById('listing-grid'),
   empty: document.getElementById('empty-state'),
@@ -80,6 +81,7 @@ const elements = {
 
 let professionals = [];
 let proposedIds = new Set();
+let singleBusinessId = '';
 function populateSelect(select, options) {
   options.forEach((value) => {
     const option = document.createElement('option');
@@ -360,7 +362,8 @@ function renderListings() {
   const stage = elements.stage.value;
   const matches = professionals.filter((professional) => {
     const searchable = [professional.name, professional.description, ...professional.categories].join(' ').toLocaleLowerCase();
-    return (!query || searchable.includes(query)) &&
+    return (!singleBusinessId || professional.id === singleBusinessId) &&
+      (!query || searchable.includes(query)) &&
       (!region || professional.regions.includes(region)) &&
       (!category || professional.categories.includes(category)) &&
       (!stage || professional.stages.includes(Number(stage)));
@@ -395,6 +398,21 @@ function clearFilters() {
   } else {
     clearActiveStageDisplay();
   }
+  renderListings();
+}
+
+function viewAllBusinesses() {
+  singleBusinessId = '';
+  elements.viewAll.hidden = true;
+  elements.search.value = '';
+  elements.region.value = '';
+  elements.category.value = '';
+  elements.stage.value = '';
+  clearActiveStageDisplay();
+
+  const url = new URL(window.location.href);
+  url.searchParams.delete('business');
+  window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
   renderListings();
 }
 
@@ -435,6 +453,8 @@ async function loadDirectory() {
     );
     const businessId = new URLSearchParams(window.location.search).get('business');
     const sharedBusiness = professionals.find((item) => item.id === businessId);
+    singleBusinessId = sharedBusiness ? sharedBusiness.id : '';
+    elements.viewAll.hidden = !sharedBusiness;
     if (sharedBusiness) {
       elements.search.value = '';
       elements.region.value = '';
@@ -506,6 +526,7 @@ function initialise() {
     }
   });
   elements.clear.addEventListener('click', clearFilters);
+  elements.viewAll.addEventListener('click', viewAllBusinesses);
   elements.form.addEventListener('submit', (event) => event.preventDefault());
   selectStage(1, true);
   loadDirectory();

@@ -117,7 +117,7 @@ No package installation or environment variables are required. The build command
 
 After deployment, add a **Custom HTML** block in the Kadence editor. It passes a `business` query parameter from the WordPress page to the directory, resizes the iframe as the directory changes, and acknowledges the resize before a shared listing link scrolls to its card.
 
-Each card's **Copy listing link** button points to the WordPress guide with the provider's existing JSON `id`. A valid `business` parameter clears the default stage filter, reveals and highlights that card, and scrolls to it after the iframe resize is acknowledged.
+Each card's **Copy listing link** button points to the WordPress guide with the provider's existing JSON `id`. A valid `business` parameter shows only that card and scrolls to it after the iframe resize is acknowledged. **View all businesses** restores the full directory and filters; it removes the parameter from the standalone or iframe URL. In an embedded view, the WordPress parent URL remains unchanged.
 
 ```html
 <iframe
