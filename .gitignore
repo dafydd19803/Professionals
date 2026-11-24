@@ -1,0 +1,6 @@
+/dist/
+.env
+.env.*
+!.env.example
+/data/proposed-professionals.json
+/PROPOSED_DIRECTORY_RESEARCH_REPORT.md

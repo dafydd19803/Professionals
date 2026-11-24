@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1b2b3e">
+  <meta name="description" content="Understand the professional services involved in commercial property projects across Mid Wales, North Wales and Cheshire.">
+  <title>Commercial Property Professionals Guide | Blue Dawn Commercial</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="preview-banner" id="preview-banner" role="status" hidden></aside>
+    <section class="journey-section section-block" id="journey" aria-labelledby="journey-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Your property journey</p>
+          <h2 id="journey-heading">Expertise, when you need it</h2>
+        </div>
+        <p class="section-aside">Select a stage to see the services that may support your project.</p>
+      </div>
+      <div class="journey-grid" role="group" aria-label="Choose a property journey stage">
+        <button class="stage-card is-active" type="button" data-stage="1" aria-pressed="true">
+          <span class="stage-number">01</span><span class="stage-title">Find &amp; Assess</span><span class="stage-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="stage-card" type="button" data-stage="2" aria-pressed="false">
+          <span class="stage-number">02</span><span class="stage-title">Finance &amp; Acquire</span><span class="stage-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="stage-card" type="button" data-stage="3" aria-pressed="false">
+          <span class="stage-number">03</span><span class="stage-title">Plan &amp; Develop</span><span class="stage-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="stage-card" type="button" data-stage="4" aria-pressed="false">
+          <span class="stage-number">04</span><span class="stage-title">Tax &amp; Structure</span><span class="stage-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="stage-card" type="button" data-stage="5" aria-pressed="false">
+          <span class="stage-number">05</span><span class="stage-title">Protect</span><span class="stage-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="stage-card" type="button" data-stage="6" aria-pressed="false">
+          <span class="stage-number">06</span><span class="stage-title">Manage &amp; Operate</span><span class="stage-arrow" aria-hidden="true">↗</span>
+        </button>
+      </div>
+      <div class="stage-detail" aria-live="polite">
+        <div class="stage-detail-index" id="active-stage-number">01</div>
+        <div class="stage-detail-copy">
+          <p class="eyebrow">Selected stage</p>
+          <h3 id="active-stage-title">Find &amp; Assess</h3>
+          <p id="active-stage-description">Commercial estate agents, surveyors and other professionals who can help identify and assess suitable property.</p>
+        </div>
+        <div class="stage-categories">
+          <span class="eyebrow">Relevant expertise</span>
+          <div class="category-chips" id="stage-categories"></div>
+          <a class="stage-cta" id="capital-allowances-cta" href="https://bluedawncommercial.co.uk/capitalallowances/" target="_blank" rel="noopener noreferrer" hidden>
+            Capital allowances enquiries <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="directory-section section-block" id="directory" aria-labelledby="directory-heading">
+      <div class="directory-top">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The directory</p>
+            <h2 id="directory-heading">Explore professional services</h2>
+          </div>
+          <p class="section-aside">Search by provider or service, then narrow your results by location and expertise.</p>
+        </div>
+        <button class="text-button clear-button" id="clear-filters" type="button">Clear search, area &amp; category <span aria-hidden="true">↺</span></button>
+      </div>
+      <form class="filters" id="directory-filters" role="search">
+        <label class="search-field">
+          <span class="field-label">Search the directory</span>
+          <span class="input-wrap"><span class="search-icon" aria-hidden="true"></span><input id="search-input" type="search" placeholder="Business, profession or service" autocomplete="off"></span>
+        </label>
+        <label>
+          <span class="field-label">Area</span>
+          <select id="region-filter"><option value="">All areas</option></select>
+        </label>
+        <label>
+          <span class="field-label">Professional category</span>
+          <select id="category-filter"><option value="">All categories</option></select>
+        </label>
+        <label>
+          <span class="field-label">Journey stage</span>
+          <select id="stage-filter"><option value="">All stages</option></select>
+        </label>
+      </form>
+
+      <div class="results-heading">
+        <p id="results-count" aria-live="polite">Loading directory…</p>
+        <p class="results-hint">Businesses are listed once, even when they cover multiple areas or stages.</p>
+      </div>
+      <div class="listing-grid" id="listing-grid" aria-live="polite" aria-busy="true"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span class="empty-icon" aria-hidden="true">⌕</span>
+        <h3 id="empty-title">No businesses listed yet</h3>
+        <p id="empty-description">The directory is ready to grow. Check back as verified local professionals are added.</p>
+      </div>
+      <p class="data-error" id="data-error" role="alert" hidden>We couldn’t load the directory right now. Please refresh the page to try again.</p>
+      <p class="directory-disclaimer"><strong>Guide owner and publisher:</strong> Blue Dawn Commercial is listed here for its capital allowances service. Other entries are third-party businesses; inclusion is not an endorsement or recommendation. Visitors should independently assess each provider’s suitability, qualifications and regulatory status where relevant.</p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,796 @@
+[
+  {
+    "id": "halls",
+    "name": "Halls",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Commercial Estate Agents"],
+    "regions": ["Mid Wales"],
+    "stages": [1],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Official website, category and Mid Wales coverage have not been verified. Existing category and area are retained from the supplied guide."]
+  },
+  {
+    "id": "roger-parry-partners",
+    "name": "Roger Parry & Partners",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Commercial Estate Agents"],
+    "regions": ["Mid Wales", "North Wales"],
+    "stages": [1],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Official website, category and Mid Wales/North Wales coverage have not been verified. Existing category and areas are retained from the supplied guide."]
+  },
+  {
+    "id": "tsr",
+    "name": "TSR",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Commercial Estate Agents"],
+    "regions": ["Mid Wales"],
+    "stages": [1],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Official website, category and Mid Wales coverage have not been verified. Existing category and area are retained from the supplied guide."]
+  },
+  {
+    "id": "savills",
+    "name": "Savills",
+    "description": "Commercial property services include acquisition, leasing, sales, development, management and valuation.",
+    "website": "https://www.savills.co.uk/",
+    "logo": "",
+    "categories": ["Commercial Estate Agents"],
+    "regions": ["Mid Wales", "North Wales", "Cheshire"],
+    "stages": [1],
+    "featured": false,
+    "last_verified": "2026-11-24",
+    "verification_status": "partially_verified",
+    "source_urls": [
+      "https://www.savills.co.uk/",
+      "https://www.savills.co.uk/find-commercial-property/"
+    ],
+    "review_notes": ["The website supports UK-wide commercial coverage; confirm local office or service coverage for each listed region."]
+  },
+  {
+    "id": "timothy-a-brown",
+    "name": "Timothy A Brown",
+    "description": "Independent property firm offering commercial sales, lettings and management, surveys and professional valuations.",
+    "website": "https://www.timothyabrown.co.uk/",
+    "logo": "",
+    "categories": ["Commercial Estate Agents"],
+    "regions": ["Cheshire"],
+    "stages": [1],
+    "featured": false,
+    "last_verified": "2026-11-24",
+    "verification_status": "verified",
+    "source_urls": [
+      "https://www.timothyabrown.co.uk/about-us",
+      "https://www.timothyabrown.co.uk/contact-us"
+    ],
+    "review_notes": []
+  },
+  {
+    "id": "umi",
+    "name": "UMi",
+    "description": "Funding advisers help businesses access commercial finance, grants and investment, including options from more than 180 lenders.",
+    "website": "https://www.weareumi.co.uk/",
+    "logo": "",
+    "categories": ["Commercial Finance Brokers"],
+    "regions": ["Mid Wales", "North Wales", "Cheshire"],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "2026-11-24",
+    "verification_status": "partially_verified",
+    "source_urls": [
+      "https://www.weareumi.co.uk/",
+      "https://www.weareumi.co.uk/what-we-do/get-funding"
+    ],
+    "review_notes": ["UK-wide business funding is described; confirm whether the directory category should be Commercial Finance Brokers rather than broader funding advice."]
+  },
+  {
+    "id": "bathgate",
+    "name": "Bathgate",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Commercial Finance Brokers"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Official website, commercial finance services, category and service areas require confirmation."]
+  },
+  {
+    "id": "banc",
+    "name": "Banc",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Commercial Finance Brokers"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Business identity, official website, commercial finance services, category and service areas require confirmation."]
+  },
+  {
+    "id": "cullimore-dutton",
+    "name": "Cullimore Dutton",
+    "description": "Chester and Cheshire solicitors providing legal and financial advice, including support for business owners.",
+    "website": "https://cullimoredutton.co.uk/",
+    "logo": "",
+    "categories": ["Commercial Solicitors"],
+    "regions": ["Cheshire"],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "2026-11-24",
+    "verification_status": "partially_verified",
+    "source_urls": [
+      "https://cullimoredutton.co.uk/"
+    ],
+    "review_notes": ["The site confirms solicitors in Chester and Cheshire and support for business owners; confirm that it undertakes commercial-property legal work."]
+  },
+  {
+    "id": "at-legal",
+    "name": "At Legal",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Commercial Solicitors"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Exact business identity, official website, commercial-property legal services, category and service areas require confirmation."]
+  },
+  {
+    "id": "oliver-co",
+    "name": "Oliver & Co",
+    "description": "Chester solicitors offering business legal services and advice on commercial agreements.",
+    "website": "https://www.oliverandco.co.uk/",
+    "logo": "",
+    "categories": ["Commercial Solicitors"],
+    "regions": ["Cheshire"],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "2026-11-24",
+    "verification_status": "partially_verified",
+    "source_urls": [
+      "https://www.oliverandco.co.uk/business/",
+      "https://www.oliverandco.co.uk/contact-us/"
+    ],
+    "review_notes": ["Business legal services and the Chester office are confirmed; confirm whether the firm handles commercial-property transactions."]
+  },
+  {
+    "id": "williams-ellis",
+    "name": "Williams Ellis",
+    "description": "North Wales valuation and commercial property consultancy offering RICS Red Book valuations, lease advice and rent reviews.",
+    "website": "https://www.williamsellis.co.uk/",
+    "logo": "",
+    "categories": ["Commercial Valuers"],
+    "regions": ["North Wales"],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "2026-11-24",
+    "verification_status": "verified",
+    "source_urls": [
+      "https://www.williamsellis.co.uk/"
+    ],
+    "review_notes": []
+  },
+  {
+    "id": "debsurveys",
+    "name": "Debsurveys",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Commercial Valuers"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Exact business identity, official website, valuation services, category and service areas require confirmation."]
+  },
+  {
+    "id": "local-architects-direct",
+    "name": "Local Architects Direct",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Commercial Valuers"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Category is questionable: the business name suggests architectural services, while the supplied category is Commercial Valuers. Verify business identity, services and category before changing it."]
+  },
+  {
+    "id": "coxeys",
+    "name": "Coxeys",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Accountants and Tax Advisers"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Exact business identity, official website, accountancy/tax services, category and service areas require confirmation."]
+  },
+  {
+    "id": "ellis-co",
+    "name": "Ellis & Co",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Accountants and Tax Advisers"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["The business name is ambiguous. Confirm which firm is intended, then verify its official website, accountancy/tax services and service areas."]
+  },
+  {
+    "id": "the-uncommon-practice",
+    "name": "The Uncommon Practice",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Accountants and Tax Advisers"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["Exact business identity, official website, accountancy/tax services, category and service areas require confirmation."]
+  },
+  {
+    "id": "wr-partners",
+    "name": "WR Partners",
+    "description": "Accountants, auditors and tax specialists providing advice to businesses.",
+    "website": "https://wrpartners.co.uk/",
+    "logo": "",
+    "categories": ["Accountants and Tax Advisers"],
+    "regions": ["Mid Wales", "Cheshire"],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "2026-11-24",
+    "verification_status": "partially_verified",
+    "source_urls": [
+      "https://wrpartners.co.uk/",
+      "https://wrpartners.co.uk/accountants-nantwich/",
+      "https://wrpartners.co.uk/accountants-newtown/"
+    ],
+    "review_notes": ["Accountancy/tax services and offices in Newtown, Nantwich and Northwich are confirmed; confirm the commercial-property relevance of its Stage 2 listing."]
+  },
+  {
+    "id": "rch",
+    "name": "RCH",
+    "description": "",
+    "website": "",
+    "logo": "",
+    "categories": ["Accountants and Tax Advisers"],
+    "regions": [],
+    "stages": [2],
+    "featured": false,
+    "last_verified": "",
+    "verification_status": "needs_review",
+    "source_urls": [],
+    "review_notes": ["The acronym is ambiguous. Confirm the exact business, official website, accountancy/tax services and service areas."]
+  },
+{
+    "id":  "hughes-architects",
+    "name":  "Hughes Architects",
+    "description":  "Commercial architecture practice supporting feasibility, site assessment, design, planning, construction and project handover.",
+    "website":  "https://www.hughesarchitects.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Architects",
+                       "Planning Consultants",
+                       "Project Managers"
+                   ],
+    "regions":  [
+                    "Mid Wales"
+                ],
+    "stages":  [
+                   3
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.hughesarchitects.co.uk/",
+                        "https://www.hughesarchitects.co.uk/who-we-work-with/commercial/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "hannah-james-associates",
+    "name":  "Hannah James Associates Ltd",
+    "description":  "Commercial property consultancy providing building contracts and monitoring, feasibility studies, planning, fire-risk assessments and CDM advice.",
+    "website":  "https://hannahjamesltd.com/",
+    "logo":  "",
+    "categories":  [
+                       "Architects",
+                       "Building Surveyors",
+                       "Fire Safety Specialists"
+                   ],
+    "regions":  [
+                    "North Wales"
+                ],
+    "stages":  [
+                   3,
+                   5
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://hannahjamesltd.com/",
+                        "https://hannahjamesltd.com/commercial.html"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "cassidy-ashton",
+    "name":  "Cassidy + Ashton",
+    "description":  "Mold-based practice providing architecture, town planning, masterplanning and project management for commercial and industrial sectors.",
+    "website":  "https://www.cassidyashton.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Architects",
+                       "Planning Consultants",
+                       "Project Managers"
+                   ],
+    "regions":  [
+                    "North Wales"
+                ],
+    "stages":  [
+                   3
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.cassidyashton.co.uk/north-wales-architect/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "clwydian-planning",
+    "name":  "Clwydian Planning",
+    "description":  "North Wales practice offering commercial and industrial architecture with planning-integrated design services.",
+    "website":  "https://www.clwydianplanning.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Architects",
+                       "Planning Consultants"
+                   ],
+    "regions":  [
+                    "North Wales"
+                ],
+    "stages":  [
+                   3
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.clwydianplanning.co.uk/architecture"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "charterhouse-surveyors",
+    "name":  "Charterhouse Surveyors",
+    "description":  "Chester-based multidisciplinary practice providing commercial building surveys, planning applications and building engineering services.",
+    "website":  "https://www.charterhouse-surveyors.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Building Surveyors",
+                       "Planning Consultants"
+                   ],
+    "regions":  [
+                    "Cheshire",
+                    "North Wales"
+                ],
+    "stages":  [
+                   3
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.charterhouse-surveyors.co.uk/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "wakemans",
+    "name":  "Wakemans",
+    "description":  "Caernarfon consultancy providing quantity surveying, project management, building surveying, planning support and CDM services.",
+    "website":  "https://wakemans.com/",
+    "logo":  "",
+    "categories":  [
+                       "Building Surveyors",
+                       "Health and Safety Consultants",
+                       "Project Managers",
+                       "Quantity Surveyors"
+                   ],
+    "regions":  [
+                    "North Wales"
+                ],
+    "stages":  [
+                   3,
+                   5
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://wakemans.com/caernarfon-office/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "eden-construction-nw",
+    "name":  "Eden Construction (NW) Ltd",
+    "description":  "Wrexham-based civil engineering and construction contractor serving commercial and industrial clients, from small repairs to larger extensions.",
+    "website":  "https://www.edennw.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Civil Engineers",
+                       "Construction Contractors"
+                   ],
+    "regions":  [
+                    "North Wales"
+                ],
+    "stages":  [
+                   3
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.edennw.co.uk/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "ejb-building-property-maintenance",
+    "name":  "EJB Building \u0026 Property Maintenance Ltd",
+    "description":  "Commercial and industrial building contractor providing facilities management, planned and reactive maintenance, cleaning and building repairs.",
+    "website":  "https://www.ejbbuildingandpropertymaintenance.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Commercial Maintenance Providers",
+                       "Construction Contractors",
+                       "Facilities Management Providers"
+                   ],
+    "regions":  [
+                    "North Wales"
+                ],
+    "stages":  [
+                   3,
+                   6
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.ejbbuildingandpropertymaintenance.co.uk/",
+                        "https://www.ejbbuildingandpropertymaintenance.co.uk/facilities-management/"
+                    ],
+    "review_notes":  [
+                         "The site also describes coverage across the North West of England; this broad claim has not been mapped to Cheshire."
+                     ]
+},
+{
+    "id":  "milwyn-jenkins-jenkins",
+    "name":  "Milwyn Jenkins \u0026 Jenkins",
+    "description":  "Solicitors advising on commercial property leases, purchases and other property matters for business clients.",
+    "website":  "https://www.mjjsolicitors.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Commercial Property Solicitors"
+                   ],
+    "regions":  [
+                    "Mid Wales"
+                ],
+    "stages":  [
+                   4
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.mjjsolicitors.co.uk/services/business-services/commercial-property"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "pda-law",
+    "name":  "PDA Law",
+    "description":  "Chester-based solicitors advising businesses, landlords and investors on commercial property transactions, leases and development work.",
+    "website":  "https://pdalaw.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Commercial Property Solicitors"
+                   ],
+    "regions":  [
+                    "Cheshire",
+                    "North Wales"
+                ],
+    "stages":  [
+                   4
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://pdalaw.co.uk/commercial-property/chester"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "rowlinsons-solicitors",
+    "name":  "Rowlinsons Solicitors",
+    "description":  "Commercial property solicitors advising on leases, sales, purchases, planning and development transactions.",
+    "website":  "https://www.rowlinsons.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Commercial Property Solicitors"
+                   ],
+    "regions":  [
+                    "Cheshire",
+                    "North Wales"
+                ],
+    "stages":  [
+                   4
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.rowlinsons.co.uk/commercial-property/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "eryri-consulting",
+    "name":  "Eryri Consulting",
+    "description":  "Consultancy providing health and safety, CDM, fire safety and compliance support for organisations.",
+    "website":  "https://eryriconsulting.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Fire Safety Specialists",
+                       "Health and Safety Consultants"
+                   ],
+    "regions":  [
+                    "Cheshire",
+                    "North Wales"
+                ],
+    "stages":  [
+                   5
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://eryriconsulting.co.uk/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "dragon-fire-safety",
+    "name":  "Dragon Fire Safety",
+    "description":  "Fire safety consultancy providing fire-risk assessments and fire-warden training to businesses, organisations and landlords.",
+    "website":  "https://www.dragonfiresafety.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Fire Safety Specialists"
+                   ],
+    "regions":  [
+                    "Cheshire",
+                    "North Wales"
+                ],
+    "stages":  [
+                   5
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.dragonfiresafety.co.uk/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "safe-365-uk",
+    "name":  "Safe 365 UK Ltd",
+    "description":  "SHEQ consultancy offering fire-risk assessments, health and safety advice, legal compliance audits and ongoing support.",
+    "website":  "https://safe365.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Building Compliance Specialists",
+                       "Fire Safety Specialists",
+                       "Health and Safety Consultants"
+                   ],
+    "regions":  [
+                    "Cheshire"
+                ],
+    "stages":  [
+                   5
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://safe365.uk/"
+                    ],
+    "review_notes":  [
+                         "The site describes service across Cheshire and the North West; the broader North West claim is not mapped to additional directory regions."
+                     ]
+},
+{
+    "id":  "oculus-group",
+    "name":  "Oculus Group",
+    "description":  "Facilities management provider coordinating commercial maintenance, contract cleaning and security services.",
+    "website":  "https://www.oculusfm.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Commercial Cleaning Providers",
+                       "Commercial Maintenance Providers",
+                       "Facilities Management Providers",
+                       "Security Specialists"
+                   ],
+    "regions":  [
+                    "Cheshire",
+                    "North Wales"
+                ],
+    "stages":  [
+                   5,
+                   6
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://www.oculusfm.co.uk/facilities-management/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "deeside-management-services",
+    "name":  "Deeside Management Services",
+    "description":  "Regional facilities management contractor providing hard and soft services, planned work and reactive building maintenance.",
+    "website":  "https://deesideservices.com/",
+    "logo":  "",
+    "categories":  [
+                       "Commercial Maintenance Providers",
+                       "Facilities Management Providers"
+                   ],
+    "regions":  [
+                    "Cheshire",
+                    "North Wales"
+                ],
+    "stages":  [
+                   6
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://deesideservices.com/facilities-management"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "quirks-property-maintenance",
+    "name":  "Quirks Property Maintenance",
+    "description":  "Commercial property maintenance contractor providing building repairs, emergency callouts and planned maintenance.",
+    "website":  "https://quirkspropertymaintenance.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Commercial Maintenance Providers"
+                   ],
+    "regions":  [
+                    "Cheshire",
+                    "North Wales"
+                ],
+    "stages":  [
+                   6
+               ],
+    "featured":  false,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://quirkspropertymaintenance.co.uk/",
+                        "https://quirkspropertymaintenance.co.uk/commercial-property-maintenance/"
+                    ],
+    "review_notes":  [
+
+                     ]
+},
+{
+    "id":  "blue-dawn-commercial",
+    "name":  "Blue Dawn Commercial",
+    "description":  "Provides specialist capital allowances reviews, surveys and reports for commercial property owners, investors and professional advisers.",
+    "website":  "https://bluedawncommercial.co.uk/",
+    "logo":  "",
+    "categories":  [
+                       "Capital Allowances Specialists"
+                   ],
+    "regions":  [
+
+                ],
+    "stages":  [
+                   4
+               ],
+    "featured":  true,
+    "guide_owner":  true,
+    "last_verified":  "2026-11-24",
+    "verification_status":  "verified",
+    "source_urls":  [
+                        "https://bluedawncommercial.co.uk/",
+                        "https://www.bluedawncommercial.co.uk/capitalallowances/"
+                    ],
+    "review_notes":  [
+
+                     ]
+}
+]
