@@ -342,10 +342,23 @@ async function loadDirectory() {
   }
 }
 
+
 function sendHeight() {
   if (window.parent === window) return;
-  const message = { type: 'blue-dawn-guide:resize', height: document.documentElement.scrollHeight };
-  PARENT_ORIGINS.forEach((origin) => window.parent.postMessage(message, origin));
+
+  const height = Math.ceil(
+    document.body.lastElementChild?.getBoundingClientRect().bottom
+    || document.body.scrollHeight
+  );
+
+  const message = {
+    type: 'blue-dawn-guide:resize',
+    height: height
+  };
+
+  PARENT_ORIGINS.forEach((origin) => {
+    window.parent.postMessage(message, origin);
+  });
 }
 
 function initialise() {
