@@ -3,6 +3,8 @@
 const REGIONS = ['Mid Wales', 'North Wales', 'Cheshire'];
 const VERIFICATION_STATUSES = ['verified', 'partially_verified', 'needs_review'];
 const PARENT_ORIGINS = ['https://bluedawncommercial.co.uk', 'https://www.bluedawncommercial.co.uk'];
+const SHARED_LISTING_PAGE = 'https://bluedawncommercial.co.uk/property-essential-guide/';
+const RESIZE_ACK_TYPE = 'blue-dawn-guide:resize-ack';
 const IS_LOCAL_DEVELOPMENT = ['localhost', '127.0.0.1'].includes(window.location.hostname);
 const PREVIEW_MODE = IS_LOCAL_DEVELOPMENT && new URLSearchParams(window.location.search).get('preview') === 'proposed';
 const STAGES = [
@@ -179,9 +181,81 @@ function getInitials(name) {
   return name.trim().split(/\s+/).filter((part) => /[A-Za-z0-9]/.test(part)).slice(0, 2).map((part) => part.charAt(0)).join('').toUpperCase();
 }
 
+function getListingCardId(businessId) {
+  return `business-${businessId}`;
+}
+
+function getShareUrl(businessId) {
+  const url = new URL(SHARED_LISTING_PAGE);
+  url.searchParams.set('business', businessId);
+  return url.href;
+}
+
+async function copyToClipboard(value) {
+  let clipboardError;
+  if (window.isSecureContext && navigator.clipboard && navigator.clipboard.writeText) {
+    try {
+      await navigator.clipboard.writeText(value);
+      return;
+    } catch (error) {
+      clipboardError = error;
+    }
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = value;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.left = '-9999px';
+  let copied = false;
+  try {
+    document.body.append(textarea);
+    textarea.select();
+    copied = typeof document.execCommand === 'function' && document.execCommand('copy');
+  } finally {
+    textarea.remove();
+  }
+  if (!copied) throw clipboardError || new Error('Clipboard access is unavailable');
+}
+
+function scrollToSharedListing(card) {
+  const scrollIntoView = () => {
+    window.requestAnimationFrame(() => {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  };
+  if (window.parent === window) {
+    scrollIntoView();
+    return;
+  }
+
+  let acknowledged = false;
+  let fallbackTimer;
+  const handleResizeAck = (event) => {
+    const data = event.data;
+    if (event.source !== window.parent || !PARENT_ORIGINS.includes(event.origin) ||
+        !data || typeof data !== 'object' || data.type !== RESIZE_ACK_TYPE) return;
+    acknowledged = true;
+    window.clearTimeout(fallbackTimer);
+    window.removeEventListener('message', handleResizeAck);
+    scrollIntoView();
+  };
+  window.addEventListener('message', handleResizeAck);
+  sendHeight();
+
+  fallbackTimer = window.setTimeout(() => {
+    if (acknowledged) return;
+    window.removeEventListener('message', handleResizeAck);
+    // Keep fallback scrolling inside this frame if the host does not acknowledge the resize.
+    const top = card.getBoundingClientRect().top + window.scrollY - 24;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  }, 1500);
+}
+
 function createListingCard(professional) {
   const card = document.createElement('article');
   card.className = 'listing-card';
+  card.id = getListingCardId(professional.id);
 
   const top = document.createElement('div');
   top.className = 'listing-card-top';
@@ -239,6 +313,8 @@ function createListingCard(professional) {
     card.append(description);
   }
   if (professional.regions.length) card.append(tags);
+  const actions = document.createElement('div');
+  actions.className = 'listing-actions';
   if (linkUrl) {
     const link = document.createElement('a');
     link.className = 'listing-link';
@@ -246,8 +322,34 @@ function createListingCard(professional) {
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     link.textContent = 'Visit website ↗';
-    card.append(link);
+    actions.append(link);
   }
+  const shareUrl = getShareUrl(professional.id);
+  const copyButton = document.createElement('button');
+  copyButton.className = 'listing-share-button';
+  copyButton.type = 'button';
+  copyButton.textContent = 'Copy listing link';
+  copyButton.setAttribute('aria-label', `Copy a share link for ${professional.name}`);
+  const copyStatus = document.createElement('span');
+  copyStatus.className = 'listing-copy-status';
+  copyStatus.setAttribute('role', 'status');
+  copyStatus.setAttribute('aria-live', 'polite');
+  copyStatus.setAttribute('aria-atomic', 'true');
+  let feedbackTimeout;
+  copyButton.addEventListener('click', async () => {
+    window.clearTimeout(feedbackTimeout);
+    try {
+      await copyToClipboard(shareUrl);
+      copyStatus.textContent = 'Link copied.';
+      feedbackTimeout = window.setTimeout(() => {
+        copyStatus.textContent = '';
+      }, 3500);
+    } catch (error) {
+      copyStatus.textContent = `Copy failed. Copy this URL: ${shareUrl}`;
+    }
+  });
+  actions.append(copyButton, copyStatus);
+  card.append(actions);
   return card;
 }
 
@@ -331,7 +433,23 @@ async function loadDirectory() {
       item.categories.every((itemCategory) => CATEGORIES.includes(itemCategory)) &&
       item.regions.every((itemRegion) => REGIONS.includes(itemRegion))
     );
+    const businessId = new URLSearchParams(window.location.search).get('business');
+    const sharedBusiness = professionals.find((item) => item.id === businessId);
+    if (sharedBusiness) {
+      elements.search.value = '';
+      elements.region.value = '';
+      elements.category.value = '';
+      elements.stage.value = '';
+      clearActiveStageDisplay();
+    }
     renderListings();
+    if (sharedBusiness) {
+      const card = document.getElementById(getListingCardId(sharedBusiness.id));
+      if (card) {
+        card.classList.add('is-shared-target');
+        scrollToSharedListing(card);
+      }
+    }
   } catch (error) {
     console.error('Unable to load professionals directory:', error);
     elements.grid.setAttribute('aria-busy', 'false');

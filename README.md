@@ -115,21 +115,24 @@ No package installation or environment variables are required. The build command
 
 ## Embed in WordPress / Kadence
 
-After deployment, add a **Custom HTML** block in the Kadence editor and replace `YOUR-PROJECT.pages.dev` with the exact Cloudflare Pages hostname. The initial height is a fallback; the listener below resizes the iframe as the directory changes.
+After deployment, add a **Custom HTML** block in the Kadence editor. It passes a `business` query parameter from the WordPress page to the directory, resizes the iframe as the directory changes, and acknowledges the resize before a shared listing link scrolls to its card.
+
+Each card's **Copy listing link** button points to the WordPress guide with the provider's existing JSON `id`. A valid `business` parameter clears the default stage filter, reveals and highlights that card, and scrolls to it after the iframe resize is acknowledged.
 
 ```html
 <iframe
-  id="professionals-guide"
-  src="https://YOUR-PROJECT.pages.dev/"
+  id="professionals-directory"
+  src="https://professionals-ceq.pages.dev/"
   title="Commercial Property Professionals Guide"
   style="display:block;width:100%;height:1500px;border:0"
   loading="lazy"
 ></iframe>
 <script>
 (() => {
-  const frame = document.getElementById('professionals-guide');
-  const trustedOrigin = 'https://YOUR-PROJECT.pages.dev';
+  const frame = document.getElementById('professionals-directory');
+  const trustedOrigin = 'https://professionals-ceq.pages.dev';
   if (!frame) return;
+
   window.addEventListener('message', (event) => {
     if (event.origin !== trustedOrigin || event.source !== frame.contentWindow) return;
     const data = event.data;
@@ -138,12 +141,20 @@ After deployment, add a **Custom HTML** block in the Kadence editor and replace 
         !Number.isSafeInteger(data.height) ||
         data.height < 300 || data.height > 10000) return;
     frame.style.height = `${data.height}px`;
+    frame.contentWindow.postMessage({ type: 'blue-dawn-guide:resize-ack' }, trustedOrigin);
   });
+
+  const businessId = new URLSearchParams(window.location.search).get('business');
+  if (businessId) {
+    const iframeUrl = new URL(frame.src);
+    iframeUrl.searchParams.set('business', businessId);
+    frame.src = iframeUrl.href;
+  }
 })();
 </script>
 ```
 
-The app sends resize messages only to the exact Blue Dawn origins `https://bluedawncommercial.co.uk` and `https://www.bluedawncommercial.co.uk`. The bare hostname currently redirects to `www`; only the origin matching the actual parent receives a message. The parent listener validates that the message came from the iframe and checks its type and bounded integer height. External provider links open in a new tab. If WordPress or a content-security policy removes inline scripts, add the same listener through an approved site-script mechanism; the iframe still has the 1500px fallback height.
+The app sends resize messages only to the exact Blue Dawn origins `https://bluedawncommercial.co.uk` and `https://www.bluedawncommercial.co.uk`. Only the origin matching the actual parent receives a message. The parent listener validates the iframe source, origin, message type and bounded integer height before resizing and acknowledging it. External provider links open in a new tab. If WordPress or a content-security policy removes inline scripts, add the same listener through an approved site-script mechanism; the iframe still has the 1500px fallback height.
 
 The parent page and the embedded app are separate origins; do not rely on same-origin access. WordPress security settings or a content-security policy may restrict iframe use or inline scripts; in that case, place the listener in an approved site script or use the fixed-height fallback.
 
