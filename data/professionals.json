@@ -118,6 +118,28 @@
   },
 
 {
+  "id": "robert-owen-community-banking",
+  "name": "Robert Owen Community Banking Fund",
+  "description": "Newtown based community finance provider offering business loans to support growth, investment, working capital and improvements to business premises. Provides accessible finance to businesses across Wales.",
+  "website": "https://www.rocbf.co.uk/business-development-loans/",
+  "logo": "",
+  "categories": ["Commercial Finance Brokers"],
+  "regions": ["Mid Wales", "North Wales"],
+  "stages": [2],
+  "featured": false,
+  "last_verified": "2026-11-24",
+  "verification_status": "verified",
+  "source_urls": [
+    "https://www.rocbf.co.uk/",
+    "https://www.rocbf.co.uk/business-development-loans/",
+    "https://www.rocbf.co.uk/about/"
+  ],
+  "review_notes": [
+    "Community development finance institution and direct lender, not a commercial finance broker. Existing directory category retained for compatibility."
+  ]
+},
+
+{
   "id": "banc",
   "name": "Development Bank of Wales",
   "description": "Welsh Government backed development finance provider offering loans for commercial property development, including new office and industrial premises, alongside wider business funding and investment.",
@@ -142,7 +164,7 @@
     "website": "https://cullimoredutton.co.uk/",
     "logo": "",
     "categories": ["Commercial Solicitors"],
-    "regions": ["Cheshire"],
+    "regions": ["Cheshire", "North Wales"],
     "stages": [2],
     "featured": false,
     "last_verified": "2026-11-24",
@@ -159,7 +181,7 @@
     "website": "https://www.oliverandco.co.uk/",
     "logo": "",
     "categories": ["Commercial Solicitors"],
-    "regions": ["Cheshire"],
+    "regions": ["Cheshire", "North Wales"],
     "stages": [2],
     "featured": false,
     "last_verified": "2026-11-24",
