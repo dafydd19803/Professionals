@@ -18,14 +18,14 @@ const STAGES = [
     number: '02',
     title: 'Finance & Acquire',
     description: 'Finance brokers, lenders, solicitors, valuers and advisers involved in funding and completing a property transaction.',
-    categories: ['Commercial Finance Brokers', 'Commercial Lenders', 'Commercial Solicitors', 'Commercial Valuers', 'Accountants and Tax Advisers']
+    categories: ['Commercial Finance Brokers', 'Commercial Lenders', 'Commercial Solicitors', 'Commercial Valuers', 'Accountants', 'Tax Advisers']
   },
   {
     id: 3,
     number: '03',
     title: 'Plan & Develop',
     description: 'Architects, planning consultants, quantity surveyors, engineers, project managers and construction professionals.',
-    categories: ['Architects', 'Planning Consultants', 'Quantity Surveyors', 'Structural Engineers', 'Civil Engineers', 'Building Services Engineers', 'Project Managers', 'Construction Contractors', 'Building Surveyors']
+    categories: ['Architects', 'Architectural Matching Services', 'Planning Consultants', 'Quantity Surveyors', 'Structural Engineers', 'Civil Engineers', 'Building Services Engineers', 'Project Managers', 'Construction Contractors', 'Building Surveyors']
   },
   {
     id: 4,
@@ -50,6 +50,9 @@ const STAGES = [
   }
 ];
 const CATEGORIES = Array.from(new Set(STAGES.flatMap((stage) => stage.categories))).sort((a, b) => a.localeCompare(b));
+const MOBILE_CATEGORY_LABELS = new Map([
+  ['Property Investment and Ownership Advisers', 'Property Investment']
+]);
 
 const elements = {
   previewBanner: document.getElementById('preview-banner'),
@@ -81,6 +84,16 @@ function populateSelect(select, options) {
     option.value = value;
     option.textContent = value;
     select.append(option);
+  });
+}
+
+function updateCategorySelectLabels() {
+  const useCompactLabels = window.matchMedia('(max-width: 430px)').matches;
+  Array.from(elements.category.options).forEach((option) => {
+    const fullLabel = option.value || option.textContent;
+    option.textContent = useCompactLabels
+      ? MOBILE_CATEGORY_LABELS.get(fullLabel) || fullLabel
+      : fullLabel;
   });
 }
 
@@ -338,6 +351,8 @@ function sendHeight() {
 function initialise() {
   populateSelect(elements.region, REGIONS);
   populateSelect(elements.category, CATEGORIES);
+  updateCategorySelectLabels();
+  window.addEventListener('resize', updateCategorySelectLabels);
   STAGES.forEach((stage) => {
     const option = document.createElement('option');
     option.value = String(stage.id);
