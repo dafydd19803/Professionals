@@ -215,7 +215,7 @@
     "description": "Chester based chartered surveyors providing property valuations, commercial and industrial valuations, expert witness reports and compulsory purchase advice.",
     "website": "https://deesurveys.com/",
     "logo": "",
-    "categories": ["Commercial Valuers"],
+    "categories": ["Commercial Valuers", "Expert Witnesses", "Valuation Surveyors","Building Surveyors","chartered Surveyors"],
     "regions": ["North Wales", "Cheshire"],
     "stages": [2],
     "featured": false,
