@@ -210,6 +210,26 @@
     "review_notes": []
   },
   {
+  "id": "quant-accountants",
+  "name": "Quant Accountants",
+  "description": "Chester based accountancy practice providing accountancy services and digital accounting software to support businesses with their financial management and accounting requirements.",
+  "website": "https://www.quantaccountants.co.uk/",
+  "logo": "",
+  "categories": ["Accountants"],
+  "regions": ["North Wales", "Cheshire"],
+  "stages": [2, 4],
+  "featured": false,
+  "last_verified": "",
+  "verification_status": "partially_verified",
+  "source_urls": [
+    "https://www.quantaccountants.co.uk/",
+    "https://app.quantaccountants.co.uk/terms"
+  ],
+  "review_notes": [
+    "Chester registered office and accountancy services confirmed. North Wales coverage included as requested. Full range of taxation and advisory services requires confirmation."
+  ]
+},
+  {
     "id": "deesurveys",
     "name": "DEESURVEYS",
     "description": "Chester based chartered surveyors providing property valuations, commercial and industrial valuations, expert witness reports and compulsory purchase advice.",
